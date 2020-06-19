@@ -7,15 +7,15 @@
   
   <title>Javasciprt 忍者開發技巧探秘 第二版  讀後整理系列 01  | Elvis 筆記歸檔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="- “Javasciprt 忍者開發技巧探秘 第二版 “ &amp;nbsp;&amp;nbsp; 讀後整理系列 01 -** 前言 **  雖然網路上有很多相似的筆記，不過仍期勉自己能夠將整本讀完後，做一套完整的整理，將從以下幾點的概述，做為第一篇的開始，而從第二篇開始，即會開始加入較多的本書重點，也就是JavaScript程式語言本身 。  本篇將先探討 網頁生命週期 網頁及JavaScript執行順序">
+  <meta name="description" content="- “Javasciprt 忍者開發技巧探秘 第二版 “ &amp;nbsp;&amp;nbsp; 讀後整理系列 01 -前言  雖然網路上有很多相似的筆記，不過仍期勉自己能夠將整本讀完後，做一套完整的整理，將從以下幾點的概述，做為第一篇的開始，而從第二篇開始，即會開始加入較多的本書重點，也就是JavaScript程式語言本身 。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javasciprt 忍者開發技巧探秘 第二版  讀後整理系列 01 ">
 <meta property="og:url" content="https://korbat4625.github.io/youzi/2020/06/17/JS-note-01/index.html">
 <meta property="og:site_name" content="Elvis 筆記歸檔">
-<meta property="og:description" content="- “Javasciprt 忍者開發技巧探秘 第二版 “ &amp;nbsp;&amp;nbsp; 讀後整理系列 01 -** 前言 **  雖然網路上有很多相似的筆記，不過仍期勉自己能夠將整本讀完後，做一套完整的整理，將從以下幾點的概述，做為第一篇的開始，而從第二篇開始，即會開始加入較多的本書重點，也就是JavaScript程式語言本身 。  本篇將先探討 網頁生命週期 網頁及JavaScript執行順序">
+<meta property="og:description" content="- “Javasciprt 忍者開發技巧探秘 第二版 “ &amp;nbsp;&amp;nbsp; 讀後整理系列 01 -前言  雖然網路上有很多相似的筆記，不過仍期勉自己能夠將整本讀完後，做一套完整的整理，將從以下幾點的概述，做為第一篇的開始，而從第二篇開始，即會開始加入較多的本書重點，也就是JavaScript程式語言本身 。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-06-17T15:07:11.000Z">
-<meta property="article:modified_time" content="2020-06-19T12:06:49.538Z">
+<meta property="article:modified_time" content="2020-06-19T12:12:22.462Z">
 <meta property="article:author" content="Elvis Huang (Aka Allen)">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
@@ -93,9 +93,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h6 id="“Javasciprt-忍者開發技巧探秘-第二版-“-nbsp-nbsp-讀後整理系列-01"><a href="#“Javasciprt-忍者開發技巧探秘-第二版-“-nbsp-nbsp-讀後整理系列-01" class="headerlink" title="- “Javasciprt 忍者開發技巧探秘 第二版 “ &nbsp;&nbsp; 讀後整理系列 01 -"></a>- “<em><a href="https://www.tenlong.com.tw/products/9789864342525?list_name=trs-t" target="_blank" rel="noopener">Javasciprt 忍者開發技巧探秘 第二版</a></em> “ &nbsp;&nbsp; 讀後整理系列 01 -</h6><table><tr><td bgcolor="#D8BFD8">** 前言 **</td></tr></table>
+        <h6 id="“Javasciprt-忍者開發技巧探秘-第二版-“-nbsp-nbsp-讀後整理系列-01"><a href="#“Javasciprt-忍者開發技巧探秘-第二版-“-nbsp-nbsp-讀後整理系列-01" class="headerlink" title="- “Javasciprt 忍者開發技巧探秘 第二版 “ &nbsp;&nbsp; 讀後整理系列 01 -"></a>- “<em><a href="https://www.tenlong.com.tw/products/9789864342525?list_name=trs-t" target="_blank" rel="noopener">Javasciprt 忍者開發技巧探秘 第二版</a></em> “ &nbsp;&nbsp; 讀後整理系列 01 -</h6><table><tr><td bgcolor="#D8BFD8">前言</td></tr></table>
 
 <p>雖然網路上有很多相似的筆記，不過仍期勉自己能夠將整本讀完後，做一套完整的整理，將從以下幾點的概述，做為第一篇的開始，而從第二篇開始，即會開始加入較多的本書重點，也就是JavaScript程式語言本身 。</p>
+<a id="more"></a>
+
 <ul>
 <li>本篇將先探討<ol>
 <li>網頁生命週期</li>
@@ -103,7 +105,7 @@
 </ol>
 </li>
 </ul>
-<table><tr><td bgcolor="#D8BFD8">**正文**</td></tr></table>
+<table><tr><td bgcolor="#D8BFD8">正文</td></tr></table>
 
 <p><strong>網頁的生命週期</strong> ，分為<font color="#f24"><strong>頁面建立</strong></font> 及<font color="#f24"> <strong>事件處理</strong></font> 兩階段，以下解說大致流程 :</p>
 <ul>
@@ -128,7 +130,7 @@
 
 
 
-<p>**  <font color="#f24">重要 : 一行一行，由上而下</font> **</p>
+<p><strong><font color="#f24">重要 : 一行一行，由上而下</font></strong></p>
 <p>瀏覽器解析HTML的方式，如同大部分程式語言一樣，是一行一行，由上而下執行下來的，這裡不討論類似陳述式<code>goto</code>這種行為，而瀏覽器也不可能做這種事情。</p>
 <p>在<strong>正文</strong>提到的網頁生命週期階段，其中有一階段為 :</p>
 <ul>
@@ -198,7 +200,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://korbat4625.github.io/youzi/2020/06/17/JS-note-01/" data-id="ckbm672wm00012ottgze50rd9" class="article-share-link">Share</a>
+      <a data-url="https://korbat4625.github.io/youzi/2020/06/17/JS-note-01/" data-id="ckbm6c6xu0001ngtt5cnk8l07" class="article-share-link">Share</a>
       
       
     </footer>
