@@ -1,99 +1,41 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>Javasciprt 忍者開發技巧探秘 第二版  讀後整理系列 01  | Elvis 筆記歸檔</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="- “Javasciprt 忍者開發技巧探秘 第二版 “ &amp;nbsp;&amp;nbsp; 讀後整理系列 01 -前言  雖然網路上有很多相似的筆記，不過仍期勉自己能夠將整本讀完後，做一套完整的整理，將從以下幾點的概述，做為第一篇的開始，而從第二篇開始，即會開始加入較多的本書重點，也就是JavaScript程式語言本身 。">
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/youzi/images/icons/favicon-16x16.png?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/youzi/images/icons/favicon-32x32.png?v=2.0.1" type="image/png" sizes="32x32"><meta name="description" content="- “Javasciprt 忍者開發技巧探秘 第二版 “ &amp;nbsp;&amp;nbsp; 讀後整理系列 01 -       前言  雖然網路上有很多相似的筆記，不過仍期勉自己能夠將整本讀完後，做一套完整的整理，將從以下幾點的概述，做為第一篇的開始，而從第二篇開始，即會開始加入較多的本書重點，也就是JavaScript程式語言本身 。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Javasciprt 忍者開發技巧探秘 第二版  讀後整理系列 01 ">
 <meta property="og:url" content="https://korbat4625.github.io/youzi/2020/06/17/JS-note-01/index.html">
 <meta property="og:site_name" content="Elvis 筆記歸檔">
-<meta property="og:description" content="- “Javasciprt 忍者開發技巧探秘 第二版 “ &amp;nbsp;&amp;nbsp; 讀後整理系列 01 -前言  雖然網路上有很多相似的筆記，不過仍期勉自己能夠將整本讀完後，做一套完整的整理，將從以下幾點的概述，做為第一篇的開始，而從第二篇開始，即會開始加入較多的本書重點，也就是JavaScript程式語言本身 。">
+<meta property="og:description" content="- “Javasciprt 忍者開發技巧探秘 第二版 “ &amp;nbsp;&amp;nbsp; 讀後整理系列 01 -       前言  雖然網路上有很多相似的筆記，不過仍期勉自己能夠將整本讀完後，做一套完整的整理，將從以下幾點的概述，做為第一篇的開始，而從第二篇開始，即會開始加入較多的本書重點，也就是JavaScript程式語言本身 。">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2020-06-17T15:07:11.000Z">
 <meta property="article:modified_time" content="2020-06-19T12:12:22.462Z">
 <meta property="article:author" content="Elvis Huang (Aka Allen)">
 <meta property="article:tag" content="JavaScript">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/youzi/atom.xml" title="Elvis 筆記歸檔" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/youzi/css/style.css">
+<meta name="twitter:card" content="summary"><meta name="keywords" content="Elvis Huang (Aka Allen), Elvis 筆記歸檔"><meta name="description" content=""><title>Javasciprt 忍者開發技巧探秘 第二版  讀後整理系列 01  | Elvis 筆記歸檔</title><link ref="canonical" href="https://korbat4625.github.io/youzi/2020/06/17/JS-note-01/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/youzi/css/index.css?v=2.0.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/youzi/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
 
-<meta name="generator" content="Hexo 4.2.1"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/youzi/" id="logo">Elvis 筆記歸檔</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/youzi/" id="subtitle">讀書心得、技術筆記</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/youzi/">Home</a>
-        
-          <a class="main-nav-link" href="/youzi/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/youzi/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜尋"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://korbat4625.github.io/youzi"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-JS-note-01" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/youzi/2020/06/17/JS-note-01/" class="article-date">
-  <time datetime="2020-06-17T15:07:11.000Z" itemprop="datePublished">2020-06-17</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Javasciprt 忍者開發技巧探秘 第二版  讀後整理系列 01 
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h6 id="“Javasciprt-忍者開發技巧探秘-第二版-“-nbsp-nbsp-讀後整理系列-01"><a href="#“Javasciprt-忍者開發技巧探秘-第二版-“-nbsp-nbsp-讀後整理系列-01" class="headerlink" title="- “Javasciprt 忍者開發技巧探秘 第二版 “ &nbsp;&nbsp; 讀後整理系列 01 -"></a>- “<em><a href="https://www.tenlong.com.tw/products/9789864342525?list_name=trs-t" target="_blank" rel="noopener">Javasciprt 忍者開發技巧探秘 第二版</a></em> “ &nbsp;&nbsp; 讀後整理系列 01 -</h6><table><tr><td bgcolor="#D8BFD8">前言</td></tr></table>
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Elvis 筆記歸檔</div><div class="header-banner-info__subtitle">讀書心得、技術筆記</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Javasciprt 忍者開發技巧探秘 第二版  讀後整理系列 01 </h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-06-17</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-06-19</span></span></div></header><div class="post-body">
+        <h6 id="“Javasciprt-忍者開發技巧探秘-第二版-“-nbsp-nbsp-讀後整理系列-01"   >
+          <a href="#“Javasciprt-忍者開發技巧探秘-第二版-“-nbsp-nbsp-讀後整理系列-01" class="heading-link"><i class="fas fa-link"></i></a>- “Javasciprt 忍者開發技巧探秘 第二版 “ &nbsp;&nbsp; 讀後整理系列 01 -</h6>
+      <div class="table-container"><table><tr><td bgcolor="#D8BFD8">前言</td></tr></table></div>
 
 <p>雖然網路上有很多相似的筆記，不過仍期勉自己能夠將整本讀完後，做一套完整的整理，將從以下幾點的概述，做為第一篇的開始，而從第二篇開始，即會開始加入較多的本書重點，也就是JavaScript程式語言本身 。</p>
 <a id="more"></a>
@@ -105,7 +47,7 @@
 </ol>
 </li>
 </ul>
-<table><tr><td bgcolor="#D8BFD8">正文</td></tr></table>
+<div class="table-container"><table><tr><td bgcolor="#D8BFD8">正文</td></tr></table></div>
 
 <p><strong>網頁的生命週期</strong> ，分為<font color="#f24"><strong>頁面建立</strong></font> 及<font color="#f24"> <strong>事件處理</strong></font> 兩階段，以下解說大致流程 :</p>
 <ul>
@@ -116,7 +58,7 @@
 </li>
 </ul>
 <p>以上為生命週期的簡易說明，講白了就是看見頁面即擁有生命，關掉頁面即結束生命。</p>
-<table><tr><td bgcolor="#D8BFD8"># 細說 1: 頁面讀取階段</td></tr></table>
+<div class="table-container"><table><tr><td bgcolor="#D8BFD8"># 細說 1: 頁面讀取階段</td></tr></table></div>
 
 <p><font size=2>(此階段開始，要用一些程式碼的部分輔以解說，為求寫文效率，一些源碼的部分會有些微省略，比如<code>&lt;!DOCTYPE html&gt;</code> <code>&lt;html&gt;...&lt;/html&gt;</code>等，將不會每次都列入文中顯示)</font></p>
 <ul>
@@ -126,7 +68,7 @@
 </li>
 </ul>
 <p>一般的HTML結構如下 :</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">      &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">      &lt;title&gt;title&lt;&#x2F;title&gt;</span><br><span class="line">  &lt;&#x2F;head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">      &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">      &lt;title&gt;title&lt;&#x2F;title&gt;</span><br><span class="line">  &lt;&#x2F;head&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></div></figure>
 
 
 
@@ -162,130 +104,39 @@
 <p>In other words: The HTML DOM is a standard for how to get, change, add, or delete HTML elements.</p>
 </blockquote>
 <p><strong>Example:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 先用DOM Core 取得id為appleTree的ul節點以做為起點</span><br><span class="line">let appleTree &#x3D; document.getElementById(&quot;appleTree&quot;); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 再利用存取物件的.符號取得更深的節點，把第一個li的值改為 0</span><br><span class="line">&#x2F;&#x2F; appleTree.childNodes[0].childNodes[0].nodeValue &#x3D; 0; </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 也可在此節點上再用一次DOM Core，再用.innerText &#x3D; &quot;0 also&quot;</span><br><span class="line">&#x2F;&#x2F; 實際實驗可以看見第二個li的值也被更新了</span><br><span class="line">&#x2F;&#x2F; appleTree.getElementsByTagName(&quot;li&quot;)[1].innerText &#x3D; &quot;0 also&quot;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 先用DOM Core 取得id為appleTree的ul節點以做為起點</span><br><span class="line">let appleTree &#x3D; document.getElementById(&quot;appleTree&quot;); </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 再利用存取物件的.符號取得更深的節點，把第一個li的值改為 0</span><br><span class="line">&#x2F;&#x2F; appleTree.childNodes[0].childNodes[0].nodeValue &#x3D; 0; </span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 也可在此節點上再用一次DOM Core，再用.innerText &#x3D; &quot;0 also&quot;</span><br><span class="line">&#x2F;&#x2F; 實際實驗可以看見第二個li的值也被更新了</span><br><span class="line">&#x2F;&#x2F; appleTree.getElementsByTagName(&quot;li&quot;)[1].innerText &#x3D; &quot;0 also&quot;;</span><br></pre></td></tr></table></div></figure>
 
 <p>如此就是我說的<strong>以 DOM Core為基底，延伸出對物件或元素節點，進行一切操作的辦法。</strong> 這是我自己的理解，若有其他想法也可以一起討論討論。或者也可以利用類似.childNodes…childNodes…childNodes…如此的方式不斷存取下去，也算是把HTML DOM的精神發揮到了極致…。</p>
-<table><tr><td bgcolor="#D8BFD8">細說 2: 網頁及JavaScript執行順序</td></tr></table>
+<div class="table-container"><table><tr><td bgcolor="#D8BFD8">細說 2: 網頁及JavaScript執行順序</td></tr></table></div>
 
 <p><strong>[回到文檔部分並加入一些內容]</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;title&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;</span><br><span class="line">  	&lt;li&gt;apple1&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;&#x2F;ul&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;script&gt;  </span><br><span class="line">  	let appleTree1 &#x3D; document.getElementById(&quot;appleTree1&quot;)</span><br><span class="line">        console.log(appleTree1)</span><br><span class="line">  &lt;&#x2F;script&gt;  </span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset&#x3D;&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;title&lt;&#x2F;title&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;</span><br><span class="line">  	&lt;li&gt;apple1&lt;&#x2F;li&gt;</span><br><span class="line">  &lt;&#x2F;ul&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;script&gt;  </span><br><span class="line">  	let appleTree1 &#x3D; document.getElementById(&quot;appleTree1&quot;)</span><br><span class="line">        console.log(appleTree1)</span><br><span class="line">  &lt;&#x2F;script&gt;  </span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></div></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; output:  &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;..&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; output:  &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;..&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></div></figure>
 <p>以上面的程式碼來說，由於前面所說瀏覽器在解析文檔時是像程式語言一樣<strong><font color="#f24">一行一行，由上而下</font></strong> (我們現在要來證實這件事)，因此瀏覽器先將ul及其內容建構進DOM中，接下來遇到<code>script</code>標籤，即會開始執行內部的JS程式，<code>document.getElementById</code>所做的事情就是尋找<font color="#f24">到目前為止已經成為DOM Tree的任一節點</font> 之元素，既然如此，我們把文檔改為以下內容:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;</span><br><span class="line">         &lt;li&gt;apple1&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let appleTree1 &#x3D; document.getElementById(&quot;appleTree1&quot;);</span><br><span class="line">        let appleTree2 &#x3D; document.getElementById(&quot;appleTree2&quot;);</span><br><span class="line">        console.log(appleTree1, appleTree2)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;</span><br><span class="line">         &lt;li&gt;apple1&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let appleTree1 &#x3D; document.getElementById(&quot;appleTree1&quot;);</span><br><span class="line">        let appleTree2 &#x3D; document.getElementById(&quot;appleTree2&quot;);</span><br><span class="line">        console.log(appleTree1, appleTree2)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></div></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; output: &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;..&lt;&#x2F;ul&gt; null</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; output: &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;..&lt;&#x2F;ul&gt; null</span><br></pre></td></tr></table></div></figure>
 <p>因為<code>document.getElementById</code>所做的事情就是尋找<font color="#f24">到目前為止已經成為DOM Tree的任一節點</font> 之元素，可以看見到目前為止在<code>script</code>之前，並沒有任何<code>id = &#39;appleTree2&#39;</code>的元素被解析進DOM Tree(可自行於除錯工具輸入document查看)，所以第二個值印出null。</p>
 <p>那我們再把文檔改為:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;</span><br><span class="line">         &lt;li&gt;apple1&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let appleTree1 &#x3D; document.getElementById(&quot;appleTree1&quot;);</span><br><span class="line">        let appleTree2 &#x3D; document.getElementById(&quot;appleTree2&quot;);</span><br><span class="line">        console.log(appleTree1, appleTree2)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree2&quot;&gt;</span><br><span class="line">        &lt;li&gt;apple2&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;console.log輸出 : &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;..&lt;&#x2F;ul&gt; null</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;</span><br><span class="line">         &lt;li&gt;apple1&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let appleTree1 &#x3D; document.getElementById(&quot;appleTree1&quot;);</span><br><span class="line">        let appleTree2 &#x3D; document.getElementById(&quot;appleTree2&quot;);</span><br><span class="line">        console.log(appleTree1, appleTree2)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree2&quot;&gt;</span><br><span class="line">        &lt;li&gt;apple2&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;console.log輸出 : &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;..&lt;&#x2F;ul&gt; null</span><br></pre></td></tr></table></div></figure>
 
 <p>發現輸出還是 null，因為<code>appleTree2</code>是在<code>script</code>內的JS程式碼執行後才被解析出來，一樣在<code>script</code>標籤之前我們看不見任何<code>appleTree2</code>的文檔內容，要得到<code>appleTree2</code>的內容，我們得遵守瀏覽器**  <font color="#f24">一行一行，由上而下</font> ** 的規則，才能在適當的時機來取得我們要的節點，既然如此，我們就遵守瀏覽器的行為，把程式碼改的稍微精準一些:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;</span><br><span class="line">        &lt;li&gt;apple1&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let appleTree1 &#x3D; document.getElementById(&quot;appleTree1&quot;);</span><br><span class="line">        console.log(appleTree1);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree2&quot;&gt;</span><br><span class="line">        &lt;li&gt;apple2&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let appleTree2 &#x3D; document.getElementById(&quot;appleTree2&quot;);</span><br><span class="line">        console.log(appleTree2);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 分別輸出:</span><br><span class="line">&#x2F;&#x2F; &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;..&lt;&#x2F;ul&gt;</span><br><span class="line">&#x2F;&#x2F; &lt;ul id&#x3D;&quot;appleTree2&quot;&gt;..&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;</span><br><span class="line">        &lt;li&gt;apple1&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let appleTree1 &#x3D; document.getElementById(&quot;appleTree1&quot;);</span><br><span class="line">        console.log(appleTree1);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line"></span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree2&quot;&gt;</span><br><span class="line">        &lt;li&gt;apple2&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let appleTree2 &#x3D; document.getElementById(&quot;appleTree2&quot;);</span><br><span class="line">        console.log(appleTree2);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 分別輸出:</span><br><span class="line">&#x2F;&#x2F; &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;..&lt;&#x2F;ul&gt;</span><br><span class="line">&#x2F;&#x2F; &lt;ul id&#x3D;&quot;appleTree2&quot;&gt;..&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></div></figure>
 
 <p>如此可以看見，我們在正確的時間點置入<code>script</code>標籤並使用<code>document.getElementById</code>取得元素節點，然後成功打印出來了 ! 由此現象可以證實，我們的瀏覽器是<font color="#f24">一行一行，由上而下</font>的執行。</p>
 <p>不過這麼寫就顯得有點冗雜，所以我們做最後的整理，再次依照瀏覽器<font color="#f24">一行一行，由上而下</font>的準則，我們調整文檔內容的位置成如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;</span><br><span class="line">        &lt;li&gt;apple1&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree2&quot;&gt;</span><br><span class="line">        &lt;li&gt;apple2&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let appleTree1 &#x3D; document.getElementById(&quot;appleTree1&quot;);</span><br><span class="line">        let appleTree2 &#x3D; document.getElementById(&quot;appleTree2&quot;);</span><br><span class="line">        console.log(appleTree2, appleTree1);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 分別輸出:</span><br><span class="line">&#x2F;&#x2F; &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;..&lt;&#x2F;ul&gt;</span><br><span class="line">&#x2F;&#x2F; &lt;ul id&#x3D;&quot;appleTree2&quot;&gt;..&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;</span><br><span class="line">        &lt;li&gt;apple1&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;ul id&#x3D;&quot;appleTree2&quot;&gt;</span><br><span class="line">        &lt;li&gt;apple2&lt;&#x2F;li&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        let appleTree1 &#x3D; document.getElementById(&quot;appleTree1&quot;);</span><br><span class="line">        let appleTree2 &#x3D; document.getElementById(&quot;appleTree2&quot;);</span><br><span class="line">        console.log(appleTree2, appleTree1);</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></div></figure>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 分別輸出:</span><br><span class="line">&#x2F;&#x2F; &lt;ul id&#x3D;&quot;appleTree1&quot;&gt;..&lt;&#x2F;ul&gt;</span><br><span class="line">&#x2F;&#x2F; &lt;ul id&#x3D;&quot;appleTree2&quot;&gt;..&lt;&#x2F;ul&gt;</span><br></pre></td></tr></table></div></figure>
 
 <p>透過遵照瀏覽器是<font color="#f24">一行一行，由上而下</font>的行為準則，我們移動文檔內容位置，分別讓<code>appleTree1</code>和<code>appleTree2</code>的兩個<code>ul</code>元素分別先被解析，接者把兩個<code>script</code>標籤合併為一個，一次取得<code>appleTree1</code> <code>appleTree2</code>兩者的內容並一起打印，而且最後也順利輸出。了解瀏覽器規則，可以幫助我們寫出更簡潔，並且有邏輯性的文檔及程式碼 !</p>
 <p>這就是為何我們常常會聽到要把<code>script</code>標籤置於文檔最下方(<code>&lt;/body&gt;</code>之前)的理由了，由於瀏覽器此行為影響甚大，因此我們在開發網頁時，通常將<code>script</code>標籤置於此，以確保我們的JavaScript程式碼可以在所有的網頁元素被解析完畢後才開始執行，以避免錯誤或不預期的結果產生!。</p>
-<table><tr><td bgcolor="#D8BFD8"> # 結尾 </td></tr></table>
+<div class="table-container"><table><tr><td bgcolor="#D8BFD8"> # 結尾 </td></tr></table></div>
 
-<p>第一篇文就到這裡了，算是比較簡單的內容，其實”<em><a href="https://www.tenlong.com.tw/products/9789864342525?list_name=trs-t" target="_blank" rel="noopener">Javasciprt 忍者開發技巧探秘 第二版</a></em> “ 這本書的目標是比較有基礎的讀者，本篇的內容也不能說和此書的開頭章節有大程度的契合性，不過大方向是一樣的，主要是想透過自己讀完一個章節，在心中自己做整理後，用自己的方式寫出由淺入深、再平易近人些的內容以及述說文字。  </p>
+<p>第一篇文就到這裡了，算是比較簡單的內容，其實”<em><span class="exturl"><a class="exturl__link"   href="https://www.tenlong.com.tw/products/9789864342525?list_name=trs-t"  target="_blank" rel="noopener">Javasciprt 忍者開發技巧探秘 第二版</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></em> “ 這本書的目標是比較有基礎的讀者，本篇的內容也不能說和此書的開頭章節有大程度的契合性，不過大方向是一樣的，主要是想透過自己讀完一個章節，在心中自己做整理後，用自己的方式寫出由淺入深、再平易近人些的內容以及述說文字。  </p>
 <p>畢竟若我們真的去讀一些技術書刊、官方文件或網站，難免會因為英文程度問題，或者翻譯可能也無法用很白話的方式翻譯，時常會被一些生澀的文字卡住，因此希望透過自己寫的文，一方面能帶給別人一些內容，最主要是給自己有個目標，同時也能夠逼自己去讀書，理解及發現一些以前自己錯過的內容，也可鍛鍊自己的邏輯整理及文筆，於自己往後的職涯，都能有更好的發展，搞不好最後我不寫程式，跑去當部落客也不一定呢，XD。</p>
 <p>感謝收看第一篇，下次再見。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://korbat4625.github.io/youzi/2020/06/17/JS-note-01/" data-id="ckbm6c6xu0001ngtt5cnk8l07" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">彙整</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/youzi/archives/2020/06/">六月 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/youzi/2020/06/17/JS-note-01/">Javasciprt 忍者開發技巧探秘 第二版  讀後整理系列 01 </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 Elvis Huang (Aka Allen)<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/youzi/" class="mobile-nav-link">Home</a>
-  
-    <a href="/youzi/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/youzi/fancybox/jquery.fancybox.css">
-
-  
-<script src="/youzi/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/youzi/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://korbat4625.github.io/youzi">Elvis Huang (Aka Allen)</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://korbat4625.github.io/youzi/2020/06/17/JS-note-01/">https://korbat4625.github.io/youzi/2020/06/17/JS-note-01/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#“Javasciprt-忍者開發技巧探秘-第二版-“-nbsp-nbsp-讀後整理系列-01"><span class="toc-number">1.</span> <span class="toc-text">
+          - “Javasciprt 忍者開發技巧探秘 第二版 “ &amp;nbsp;&amp;nbsp; 讀後整理系列 01 -</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello world</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">1</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/youzi/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Elvis Huang (Aka Allen)</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v4.2.1</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/youzi/js/utils.js?v=2.0.1"></script><script src="/youzi/js/stun-boot.js?v=2.0.1"></script><script src="/youzi/js/scroll.js?v=2.0.1"></script><script src="/youzi/js/header.js?v=2.0.1"></script><script src="/youzi/js/sidebar.js?v=2.0.1"></script></body></html>
