@@ -5,16 +5,16 @@
 <meta property="og:site_name" content="Elvis 筆記歸檔">
 <meta property="og:description" content="-“Javasciprt 忍者開發技巧探秘 第二版 “ 讀後整理系列 02-1(函數屬性)  -       前言 今日小主題: 函數屬性    由於最近回家在研究Vue CLI + Router的部分，所以更新的篇幅會比較小一點，今日主要帶來上次在工作中有使用到函式屬性的部分，之後若有機會，也會順便更新一下自己搭建的Router應用。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://korbat4625.github.io/youzi/2020/07/09/JS-note-02-1/JS-note-02-1/clickfailed.gif">
-<meta property="og:image" content="https://korbat4625.github.io/youzi/2020/07/09/JS-note-02-1/JS-note-02-1/clicksuccess.gif">
-<meta property="og:image" content="https://korbat4625.github.io/youzi/2020/07/09/JS-note-02-1/JS-note-02-1/b-table.jpg">
-<meta property="og:image" content="https://korbat4625.github.io/youzi/2020/07/09/JS-note-02-1/JS-note-02-1/codesnip.jpg">
+<meta property="og:image" content="https://upload.cc/i1/2020/07/09/2jyIgA.gif">
+<meta property="og:image" content="https://upload.cc/i1/2020/07/09/Yrc4ed.gif">
+<meta property="og:image" content="https://upload.cc/i1/2020/07/09/5ZhGCw.jpg">
+<meta property="og:image" content="https://upload.cc/i1/2020/07/09/LykxSu.jpg">
 <meta property="article:published_time" content="2020-07-09T14:28:00.000Z">
-<meta property="article:modified_time" content="2020-07-09T14:36:45.691Z">
+<meta property="article:modified_time" content="2020-07-09T15:10:35.412Z">
 <meta property="article:author" content="Elvis Huang (Aka Allen)">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://korbat4625.github.io/youzi/2020/07/09/JS-note-02-1/JS-note-02-1/clickfailed.gif"><meta name="keywords" content="Elvis Huang (Aka Allen), Elvis 筆記歸檔"><meta name="description" content=""><title>Javasciprt 忍者開發技巧探秘 第二版 讀後整理系列 02-1 (函式屬性) | Elvis 筆記歸檔</title><link ref="canonical" href="https://korbat4625.github.io/youzi/2020/07/09/JS-note-02-1/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/youzi/css/index.css?v=2.0.1"><script>var Stun = window.Stun || {};
+<meta name="twitter:image" content="https://upload.cc/i1/2020/07/09/2jyIgA.gif"><meta name="keywords" content="Elvis Huang (Aka Allen), Elvis 筆記歸檔"><meta name="description" content=""><title>Javasciprt 忍者開發技巧探秘 第二版 讀後整理系列 02-1 (函式屬性) | Elvis 筆記歸檔</title><link ref="canonical" href="https://korbat4625.github.io/youzi/2020/07/09/JS-note-02-1/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/youzi/css/index.css?v=2.0.1"><script>var Stun = window.Stun || {};
 var CONFIG = {
   root: '/youzi/',
   algolia: undefined,
@@ -49,10 +49,10 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <div class="table-container"><table><tr><td bgcolor="#D8BFD8">正文</td></tr></table></div>
 
 <p>上次工作中的一個小環節，我需要將此套件<span class="exturl"><a class="exturl__link"   href="https://bootstrap-vue.org/docs/components/table#sorting"  target="_blank" rel="noopener">sorting</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span>的部分做個小修改，由於套件行為只有升序降序來回切換，而需求需要點到第三下的時候取消掉。</p>
-<p>這是套件修改前的狀態:<br><img src="./JS-note-02-1/clickfailed.gif" alt="avatar"></p>
-<p>這是套件修改後的狀態:<br><img src="./JS-note-02-1/clicksuccess.gif" alt="avatar"></p>
-<p>因為套件本身並沒有能完成需求的一件式設定，所以必須使用套件提供的排序觸發事件sortingChanged來編寫行為  :<br><img src="./JS-note-02-1/b-table.jpg" alt="avatar"></p>
-<p>這是透過函式屬性的方式完成的關鍵代碼:<br><img src="./JS-note-02-1/codesnip.jpg" alt="avatar"></p>
+<p>這是套件修改前的狀態:<br><img src="https://upload.cc/i1/2020/07/09/2jyIgA.gif" alt="avatar"></p>
+<p>這是套件修改後的狀態:<br><img src="https://upload.cc/i1/2020/07/09/Yrc4ed.gif" alt="clicksuccess"></p>
+<p>因為套件本身並沒有能完成需求的一件式設定，所以必須使用套件提供的排序觸發事件sortingChanged來編寫行為  :<br><img src="https://upload.cc/i1/2020/07/09/5ZhGCw.jpg" alt="avatar"></p>
+<p>這是透過函式屬性的方式完成的關鍵代碼:<br><img src="https://upload.cc/i1/2020/07/09/LykxSu.jpg" alt="avatar"></p>
 <p>ctx是事件觸發時的物件，內部包含一些狀態資訊，<br>結尾的this.sortingChanged.cache是我為函式動態創建的cache屬性，用來記錄這次排序欄位是什麼，以及比對下次的排序欄位。</p>
 <p>整體的邏輯為:</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">if (上次排的欄位快取 !&#x3D;&#x3D; 這次滑鼠點擊排的欄位) &#123;</span><br><span class="line">    計數器 &#x3D; 1</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    計數器 + 1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if (計數器 &#x3D;&#x3D;&#x3D; 3) &#123;</span><br><span class="line">    計數器歸零</span><br><span class="line">    清空排序狀態</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">更新快取排序欄位</span><br></pre></td></tr></table></div></figure>
