@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="zh-TW"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><link rel="icon" href="/youzi/images/icons/favicon-16x16.png?v=2.0.1" type="image/png" sizes="16x16"><link rel="icon" href="/youzi/images/icons/favicon-32x32.png?v=2.0.1" type="image/png" sizes="32x32"><meta name="description" content="-“Javasciprt 忍者開發技巧探秘 第二版 “ 讀後整理系列 02-       前言  今天開始進入JavaScript的領域…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javasciprt 忍者開發技巧探秘 第二版 讀後整理系列 02">
+<meta property="og:url" content="https://korbat4625.github.io/youzi/2020/06/30/JS-note-02/index.html">
+<meta property="og:site_name" content="Elvis 筆記歸檔">
+<meta property="og:description" content="-“Javasciprt 忍者開發技巧探秘 第二版 “ 讀後整理系列 02-       前言  今天開始進入JavaScript的領域…">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-06-30T13:12:08.000Z">
+<meta property="article:modified_time" content="2020-07-02T14:03:17.825Z">
+<meta property="article:author" content="Elvis Huang (Aka Allen)">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary"><meta name="keywords" content="Elvis Huang (Aka Allen), Elvis 筆記歸檔"><meta name="description" content=""><title>Javasciprt 忍者開發技巧探秘 第二版 讀後整理系列 02 | Elvis 筆記歸檔</title><link ref="canonical" href="https://korbat4625.github.io/youzi/2020/06/30/JS-note-02/"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css" type="text/css"><link rel="stylesheet" href="/youzi/css/index.css?v=2.0.1"><script>var Stun = window.Stun || {};
+var CONFIG = {
+  root: '/youzi/',
+  algolia: undefined,
+  fontIcon: {"prompt":{"success":"fas fa-check-circle","info":"fas fa-arrow-circle-right","warning":"fas fa-exclamation-circle","error":"fas fa-times-circle"},"copyBtn":"fas fa-copy"},
+  sidebar: {"offsetTop":"20px","tocMaxDepth":6},
+  header: {"enable":true,"showOnPost":true,"scrollDownIcon":false},
+  postWidget: {"endText":true},
+  nightMode: {"enable":true},
+  back2top: {"enable":true},
+  codeblock: {"style":"default","highlight":"light","wordWrap":false},
+  reward: false,
+  fancybox: false,
+  zoomImage: {"gapAside":"20px"},
+  galleryWaterfall: undefined,
+  lazyload: false,
+  pjax: undefined,
+  externalLink: {"icon":{"enable":true,"name":"fas fa-external-link-alt"}},
+  shortcuts: undefined,
+  prompt: {"copyButton":"Copy","copySuccess":"Copy Success","copyError":"Copy Error"},
+  sourcePath: {"js":"js","css":"css","images":"images"},
+};
+
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/youzi/atom.xml" title="Elvis 筆記歸檔" type="application/atom+xml">
+</head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Elvis 筆記歸檔</div><div class="header-banner-info__subtitle">讀書心得、技術筆記</div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">Javasciprt 忍者開發技巧探秘 第二版 讀後整理系列 02</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-06-30</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-07-02</span></span></div></header><div class="post-body">
+        <h6 id="“Javasciprt-忍者開發技巧探秘-第二版-“-讀後整理系列-02"   >
+          <a href="#“Javasciprt-忍者開發技巧探秘-第二版-“-讀後整理系列-02" class="heading-link"><i class="fas fa-link"></i></a>-“Javasciprt 忍者開發技巧探秘 第二版 “ 讀後整理系列 02-</h6>
+      <div class="table-container"><table><tr><td bgcolor="#D8BFD8">前言</td></tr></table></div>
+
+<p>今天開始進入JavaScript的領域…</p>
+<a id="more"></a>
+
+
+<div class="table-container"><table><tr><td bgcolor="#D8BFD8">今日主題: 函式</td></tr></table></div>
+
+
+
+<p>在JavaScript中，函式是頭等公民、也可稱頭等物件(函式也是一種物件)、又稱一級函式、頭等函數。</p>
+<p>wiki: 一級函式（first-class function）是指在程序設計語言中，函數被當作頭等公民。這意味著，函數可以作為別的函數的參數、函數的返回值，賦值給變量或存儲在資料結構中。</p>
+<p>既然函式可以歸類為物件，那就代表他能夠做和物件一模一樣的事情，以下內容參考忍者書範例並重新編排內容及參雜個人解釋:</p>
+<ol>
+<li><p>物件與函式皆可藉由實值 { } 建立 : </p>
+<ul>
+<li>以物件來說，就是物件實字（Object literal）的意思</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 物件: 一般像這種 &#123; &#125; 的方式來建立物件，就叫做物件實字建立法(這是非常官方及教科書的說法)，那我們用眼睛看他怎麼建立，發現其實就是直接定義一個物件內容的意思。</span><br><span class="line">&#123;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>以函式來說，就是函式實字（Function literal）。</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;函式: 函式實字建立法聽起來有夠彆扭，其實也是直接宣告函式及其內容...</span><br><span class="line">function plantATree() &#123;...&#125;</span><br></pre></td></tr></table></div></figure>
+</li>
+<li><p>物件與函式皆可被  </p>
+<ul>
+<li><font color="#f24">指派給變數</font>、<font color="#f24">陣列資料項</font>或<font color="#f24">其他物件的屬性</font></li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 指派給變數</span><br><span class="line">tree &#x3D; &#123;</span><br><span class="line">	appleTree: 1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 注意這種沒有函式名稱的指派就是常說的匿名函式</span><br><span class="line">plantATree &#x3D;  function () &#123; </span><br><span class="line"> return &#123;</span><br><span class="line">    	appleTree: 1</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 指派給陣列</span><br><span class="line">tree &#x3D; [&#123;&#125;]</span><br><span class="line">plantATree &#x3D; [function()&#123;&#125;]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 指派作為其他物件的屬性</span><br><span class="line">tree.data &#x3D; &#123;&#125;;</span><br><span class="line">plantATree.data &#x3D; function()&#123;&#125;;</span><br></pre></td></tr></table></div></figure>
+</li>
+<li><p>物件與函式皆可  </p>
+<ul>
+<li>作為引數傳遞給函式</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 物件作為引數</span><br><span class="line">function plantATree(tree) &#123;</span><br><span class="line">	tree.growUp &#x3D; true;</span><br><span class="line">    return tree;</span><br><span class="line">&#125;</span><br><span class="line">tree &#x3D; plantATree(&#123;&#125;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 函式作為引數</span><br><span class="line">function plantATree(growUp) &#123;</span><br><span class="line">	growUp();</span><br><span class="line">&#125;</span><br><span class="line">plantATree(function()&#123;&#125;);</span><br></pre></td></tr></table></div></figure>
+</li>
+<li><p>物件與函式皆可  </p>
+<ul>
+<li>作為函式的回傳值</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function plantATree() &#123;</span><br><span class="line">	return &#123;&#125;;   &#x2F;&#x2F; 回傳物件</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function plantATree() &#123;</span><br><span class="line">	return function()&#123;&#125;;  &#x2F;&#x2F; 回傳函式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+</li>
+<li><p>物件與函式皆擁有 </p>
+<ul>
+<li>可動態建立並指派的屬性</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 在物件上新增屬性</span><br><span class="line">let tree &#x3D; &#123;&#125;;</span><br><span class="line">tree.appleTree &#x3D; 1;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 對函式新增屬性</span><br><span class="line">let plantATree &#x3D; function()&#123;&#125;;</span><br><span class="line">plantATree.appleTree &#x3D; 1;</span><br></pre></td></tr></table></div></figure>
+
+</li>
+</ol>
+<p>至此可以做個整理，在JavaScript的世界中，頭等公民具有以下特點:</p>
+<ul>
+<li>可藉由實值 { } 建立</li>
+<li>可被指派給變數、陣列資料項或其他物件的屬性</li>
+<li>可作為引數傳遞給函式</li>
+<li>可作為函式的回傳值</li>
+<li>擁有可動態建立並指派的屬性</li>
+</ul>
+<p>其中<strong>可作為引數傳遞給函式</strong>將會是一個比較特別的特性，此特性將會帶來一個新的討論，也就是回乎函式(Callback Function)</p>
+<div class="table-container"><table><tr><td bgcolor="#D8BFD8">回乎函式 Callback Function</td></tr></table></div>
+
+<p>關於回乎函式，我日前在 <span class="exturl"><a class="exturl__link"   href="https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part4/callback.html"  target="_blank" rel="noopener">這本電子書</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span> 看到一段我覺得比較生活化的解釋:</p>
+<blockquote>
+<p>有客戶打來電話給你，可是你正在電話中，客戶會留話說請你等會有空時再”回電”給它</p>
+</blockquote>
+<p><strong>而忍者書所說的是:</strong></p>
+<blockquote>
+<p>將函式作為引數傳遞給另一個函式，而在稍後的某個時間點，他可能會呼叫這個被傳入的函式，這是一種被稱為 “回乎函式” 的概念。</p>
+</blockquote>
+<p>舉一個最常見的例子:  </p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 先宣告一個函式</span><br><span class="line">function plantATree() &#123; </span><br><span class="line">	... </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let button &#x3D; document.querySelector(&quot;#button&quot;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 對按鈕進行監聽，按下去時執行 plantATree</span><br><span class="line">button.addEventListener(&quot;click&quot;, plantATree);</span><br></pre></td></tr></table></div></figure>
+<p>看這個例子就可以知道，我們把函式plantATree當作引數傳入，按下按鈕後即執行此函式，這就是回呼的概念。</p>
+<p>接下來再假設一個例子: 我們要蒐集4個輪子，如此才能組成1輛車，依照這樣的情境我們來寫一個回呼函式的例子，也就是說，當我得到4個輪子的時候，組成車子的函式就能夠被執行。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 蒐集輪子的函式，參數為 buildACar</span><br><span class="line">function collectAWheel ( buildACar ) &#123; </span><br><span class="line">    setInterval(() &#x3D;&gt; &#123;</span><br><span class="line">        wheel++;</span><br><span class="line">        if( wheel % 4 &#x3D;&#x3D;&#x3D; 0 ) &#123;  </span><br><span class="line">            buildACar();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, 1000);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 製造車子的函式</span><br><span class="line">function prepareACar () &#123;</span><br><span class="line">    car++;</span><br><span class="line">    console.log(&quot;build a car! now we have &quot; + car + &quot; cars&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let wheel &#x3D; 0;</span><br><span class="line">let car &#x3D; 0;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 開始蒐集輪子，將製造車子的函式 prepareACar 作為引數傳入</span><br><span class="line">collectAWheel(prepareACar);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 假如沒有定義 prepareACar，也可以像這樣直接傳入一個匿名函式的寫法</span><br><span class="line">&#x2F;*</span><br><span class="line">collectAWheel(function () &#123;</span><br><span class="line">    car++;</span><br><span class="line">    console.log(&quot;build a car! now we have &quot; + car + &quot; cars&quot;);</span><br><span class="line">&#125;);</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></div></figure>
+
+<p>將程式碼運行後，每一秒都會console一條新的訊息，每秒車子都會增加一輛，符合了”稍後的某個時間點(一秒後)，會呼叫這個被傳入的函式(prepareACar)”的概念。</p>
+<div class="table-container"><table><tr><td bgcolor="#D8BFD8">結尾</td></tr></table></div>
+
+<p>以上就是這篇的內容，下章節會是一個短章節，題目是函式的屬性，函式的屬性還滿少見的，一般都是使用物件的屬性，自己也是在看到忍者書的函式章節後才意識到函式有屬性這回事XD，前幾天工作的時候突然想到這件事，發現這個方式或許可以拿來用，覺得還蠻有趣的，下回再分享給大家。</p>
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="https://korbat4625.github.io/youzi">Elvis Huang (Aka Allen)</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="https://korbat4625.github.io/youzi/2020/06/30/JS-note-02/">https://korbat4625.github.io/youzi/2020/06/30/JS-note-02/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/youzi/2020/07/09/JS-note-02-1/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">Javasciprt 忍者開發技巧探秘 第二版 讀後整理系列 02-1 (函式屬性)</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/youzi/2020/06/17/JS-note-01/"><span class="paginator-prev__text">Javasciprt 忍者開發技巧探秘 第二版  讀後整理系列 01 </span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#“Javasciprt-忍者開發技巧探秘-第二版-“-讀後整理系列-02"><span class="toc-number">1.</span> <span class="toc-text">
+          -“Javasciprt 忍者開發技巧探秘 第二版 “ 讀後整理系列 02-</span></a></li></ol></section><!-- ov = overview--><section class="sidebar-ov hide"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="themes/stun/source/images/icons/stun-logo.svg" alt="avatar"></div><p class="sidebar-ov-author__text">hello world</p></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">3</div><div class="sidebar-ov-state-item__name">Archives</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/youzi/images/cc-by-nc-sa.svg"></a></div></section><div class="sidebar-reading"><div class="sidebar-reading-info"><span class="sidebar-reading-info__text">You have read </span><span class="sidebar-reading-info__num">0</span></div><div class="sidebar-reading-line"></div></div></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-heart"></i></span><span>Elvis Huang (Aka Allen)</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v4.2.1</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/youzi/js/utils.js?v=2.0.1"></script><script src="/youzi/js/stun-boot.js?v=2.0.1"></script><script src="/youzi/js/scroll.js?v=2.0.1"></script><script src="/youzi/js/header.js?v=2.0.1"></script><script src="/youzi/js/sidebar.js?v=2.0.1"></script></body></html>
